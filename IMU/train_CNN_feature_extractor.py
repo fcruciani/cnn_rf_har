@@ -38,7 +38,7 @@ if (n_layers in [1,2,3,4]) and (k in [2,8,16,24,32,64]) and (nfilters in [12,24,
 	vl_uuids = train_uuids[18:21]
 
 	#Number of cores used for parallel loading
-	num_threads = 20
+	num_threads = 10
 
 	print("Loading Training set")
 	(X_train,y_train) = UCI_HAPT.get_all_data_multi_thread_resampling_3D(tr_uuids,num_threads)
