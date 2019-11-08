@@ -15,12 +15,8 @@ from keras.utils import plot_model
 from keras.layers import *
 from datetime import datetime
 import keras
-#For multi GPU training
-#from keras.utils import multi_gpu_model
-
 
 basepath = './keras_logs/'
-
 
 ##Base class
 class BaseClassifier:
