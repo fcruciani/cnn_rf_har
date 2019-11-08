@@ -52,7 +52,7 @@ if (n_layers in [1,2,3,4]) and (k in [2,8,16,24,32,64]) and (nfilters in [12,24,
 
 	classes = ["WALKING", "W. UPSTAIRS", "W. DOWNSTAIRS", "SITTING", "STANDING", "LAYING","TRANSITION"]
 
-	clf = Classifiers.IMU_CNN_3D_FEATURE_EXTRACTOR(patience=1000,num_filters=nfilters,layers=n_layers,kern_size=k,divide_kernel_size=True,suffix="50Hz")
+	clf = Classifiers.IMU_CNN_3D_FEATURE_EXTRACTOR(patience=500,num_filters=nfilters,layers=n_layers,kern_size=k,divide_kernel_size=True,suffix="40Hz_")
 	y_train_inv = [ np.argmax(y) for y in y_train]
 	class_weights = class_weight.compute_class_weight('balanced',np.unique(y_train_inv),y_train_inv)
 	d_class_weights = dict(enumerate(class_weights))
