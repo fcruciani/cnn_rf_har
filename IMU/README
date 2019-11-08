@@ -1,1 +1,10 @@
 Scripts implementing  CNN feature extractor for IMU-based HAR.
+
+Configuration:
+- Modify paths in HAPT_Dataset.py and ES_Dataset.py to load IMU data
+
+Training:
+1. run 'python3 train_CNN_feature_extarctor.py'
+
+
+Testing:
