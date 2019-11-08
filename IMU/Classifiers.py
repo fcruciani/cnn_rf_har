@@ -34,7 +34,7 @@ class BaseClassifier:
 
 	#Class weights are used to deal with the dataset that is slightly imbalanced.
 	def fit_class_weights(self,X_tr,y_tr,X_vld,y_vld,class_weight,batch_size=256,epochs=500,verbose=0):
-		self.history = self.model.fit( X_tr, y_tr, validation_data=(X_vld,y_vld), class_weight=class_weight, batch_size=batch_size, epochs=epochs, shuffle=False, verbose=2, callbacks = [self.logger, self.early_stopping, self.checkpoint, self.csv_logger] )
+		self.history = self.model.fit( X_tr, y_tr, validation_data=(X_vld,y_vld), class_weight=class_weight, batch_size=batch_size, epochs=epochs, shuffle=False, verbose=2, callbacks = [self.early_stopping, self.checkpoint, self.csv_logger] )
 
 	
 	def loadBestWeights(self):
