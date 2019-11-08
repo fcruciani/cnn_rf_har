@@ -18,9 +18,6 @@ import HAPT_Dataset as UCI_HAPT
 from HAPT_Dataset import ucihapt_datapath
 import sys
 
-
-
-
 if len( sys.argv ) == 4:
 	#load parameters from command line arguments
 	n_layers = int(sys.argv[1])
@@ -66,7 +63,7 @@ if (n_layers in [1,2,3,4]) and (k in [2,8,16,24,32,64]) and (nfilters in [12,24,
 	y_predictions = clf.predict(X_test,batch_size=1)
 	y_predictions_inv = [ [np.argmax(y)] for y in y_predictions]
 
-	cr = classification_report(np.array(true), np.array(predictions),target_names=classes,digits=4)
+	cr = classification_report(np.array(y_true), np.array(y_predictions_inv),target_names=classes,digits=4)
 	print(cr)
 
 else:
