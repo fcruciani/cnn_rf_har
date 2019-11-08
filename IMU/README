@@ -4,7 +4,7 @@ Configuration:
 - Modify paths in HAPT_Dataset.py and ES_Dataset.py to load IMU data
 
 Training:
-1. run 'python3 train_CNN_feature_extarctor.py'
+1. run 'python3 train_CNN_feature_extractor.py'
 
 
 Testing:
